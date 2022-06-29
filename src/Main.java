@@ -38,9 +38,15 @@ public class Main {
         String pattern = "[\\s]";
         String replace = "";
 
+            //класс Pattern — это конструктор регулярных выражений.
+            // Под «капотом» метод compile вызывает закрытый конструктор класса Pattern для создания скомпилированного представления
         Pattern pattern1 = Pattern.compile(pattern);
+        //Экземпляр класса Matcher описывает механизм выполнения операций поиска по шаблону
+            // в последовательности символов путем интерпретации скомпилированного регулярного выражения класса Pattern .
         Matcher matcher = pattern1.matcher(file0);
 
+        // Класс Java Matcher ( java. util. regex. Matcher ) создан для поиска некоторого множества вхождений регулярного выражения
+            // в одном тексте и поиска по одному шаблону в разных текстах
         file0 = matcher.replaceAll(replace);
         System.out.println(file0);
         }
